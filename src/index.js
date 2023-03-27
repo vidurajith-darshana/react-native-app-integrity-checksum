@@ -17,6 +17,10 @@ const AppIntegrityChecksum = NativeModules.AppIntegrityChecksum
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AppIntegrityChecksum.multiply(a, b);
+export function getChecksum() {
+  return new Promise((resolve, reject) => {
+    AppIntegrityChecksum.getChecksum(checksum => {
+      resolve(checksum);
+    });
+  });
 }

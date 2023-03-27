@@ -1,13 +1,17 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-app-integrity-checksum';
+import { getChecksum } from 'react-native-app-integrity-checksum';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    async function getChecksumOfApp() {
+      const checksum = await getChecksum();
+      setResult(checksum);
+    }
+    getChecksumOfApp();
   }, []);
 
   return (
