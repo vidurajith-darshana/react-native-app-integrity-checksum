@@ -1,18 +1,25 @@
+#import <Foundation/Foundation.h>
 #import "AppIntegrityChecksum.h"
+#import "AWFileHash.h"
+#import <React/RCTLog.h>
+#include <sys/stat.h>
 
 @implementation AppIntegrityChecksum
 RCT_EXPORT_MODULE()
 
 // Example method
 // See // https://reactnative.dev/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(double)a withB:(double)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+RCT_REMAP_METHOD(getChecksum,
+                 getChecksumWithCallback:(RCTResponseSenderBlock)callback)
 {
-    NSNumber *result = @(a * b);
+    NSBundle* myBundle = [NSBundle mainBundle];
+    NSString* mainJsBundle = [myBundle pathForResource:@"main" ofType:@"jsbundle"];
 
-    resolve(result);
+    NSString *sha512 = [AWFileHash sha512HashOfFileAtPath:mainJsBundle];
+
+    NSLog(@"HASH: %@", sha512);
+
+    callback(@[sha512]);
 }
 
 // Don't compile this code when we build for the old architecture.

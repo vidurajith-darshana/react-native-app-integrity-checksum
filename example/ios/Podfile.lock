@@ -1,4 +1,5 @@
 PODS:
+  - AWFileHash (0.2.0)
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -421,6 +422,7 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - AWFileHash
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -484,6 +486,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AWFileHash
     - CocoaAsyncSocket
     - Flipper
     - Flipper-Boost-iOSX
@@ -573,6 +576,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AWFileHash: 5b0d1f458a1b8d4de636f12f2d71039494899521
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
@@ -624,6 +628,6 @@ SPEC CHECKSUMS:
   Yoga: 79dd7410de6f8ad73a77c868d3d368843f0c93e0
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 8715c9040f6a5256ed373bcfe7a89b04e8916d68
+PODFILE CHECKSUM: b07e413f0983fdc160629286feab92e8433512ac
 
 COCOAPODS: 1.11.3
