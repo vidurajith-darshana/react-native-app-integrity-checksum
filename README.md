@@ -33,9 +33,11 @@ then run,
 
 This will generate the relevant bundle file in your project, ios folder.
 
-3) Open your ios project in XCode (your project directory -> ios -> example.xcworkspace), and go to the build settings and expand the copy bundle resources. click on the + button and add the main.jsbundle as below.
+3) Open your ios project in XCode (your project directory -> ios -> example.xcworkspace), and go to the **Build** **Phases** and expand the copy bundle resources. click on the + button and add the main.jsbundle as below.
 
-![Screenshot 2023-03-27 at 15.22.18.png](..%2F..%2F..%2FDesktop%2FScreenshot%202023-03-27%20at%2015.22.18.png)
+(bundle will be generated usually inside of the ios folder. when adding the file, please tick on _copy if items needed_)
+
+https://images2.imgbox.com/84/1b/1RQiTMWo_o.png
 
 ## Android Guide:
 
@@ -45,7 +47,7 @@ The current implementation of the library (For Android) is to detect the JS bund
 
 your project directory -> android -> app -> src -> main -> assets
 
-![Screenshot 2023-03-27 at 12.25.02.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Ft4%2F6c4d4gfs72v1lmwxsh8yl9hc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_1ElaB2%2FScreenshot%202023-03-27%20at%2012.25.02.png)
+https://images2.imgbox.com/52/a3/uA4nRdyK_o.png
 
 If you have this folder already, you are good to go.
 
