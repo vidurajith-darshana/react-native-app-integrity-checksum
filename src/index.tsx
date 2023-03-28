@@ -1,7 +1,7 @@
 import { NativeModules, Platform } from 'react-native';
 
 const LINKING_ERROR =
-  `The package 'react-native-app-integrity-checksum' doesn't seem to be linked. Make sure: \n\n` +
+  `The package 'react-native-awesome-library' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
@@ -17,9 +17,9 @@ const AppIntegrityChecksum = NativeModules.AppIntegrityChecksum
       }
     );
 
-export function getChecksum() {
-  return new Promise((resolve, reject) => {
-    AppIntegrityChecksum.getChecksum(checksum => {
+export function getChecksum(): Promise<string> {
+  return new Promise((resolve) => {
+    AppIntegrityChecksum.getChecksum((checksum: string) => {
       resolve(checksum);
     });
   });

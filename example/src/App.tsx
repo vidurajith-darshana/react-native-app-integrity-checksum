@@ -4,14 +4,14 @@ import { StyleSheet, View, Text } from 'react-native';
 import { getChecksum } from 'react-native-app-integrity-checksum';
 
 export default function App() {
-  const [result, setResult] = React.useState();
+  const [result, setResult] = React.useState<string>('');
 
   React.useEffect(() => {
-    async function getChecksumOfApp() {
-      const checksum = await getChecksum();
-      setResult(checksum);
+    async function setupHash() {
+      const res = await getChecksum();
+      setResult(res);
     }
-    getChecksumOfApp();
+    setupHash();
   }, []);
 
   return (
