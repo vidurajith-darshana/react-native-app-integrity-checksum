@@ -1,6 +1,6 @@
 {
   "name": "react-native-app-integrity-checksum",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -43,14 +43,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gis.com/sls"
+    "url": "https://github.com/vidurajith-darshana/react-native-app-integrity-checksum"
   },
-  "author": "vidu <vi99@gmail.com> (https://gighub.com)",
+  "author": "vidu <vidu996@gmail.com> (https://github.com/vidurajith-darshana)",
   "license": "MIT",
   "bugs": {
-    "url": "https://gis.com/sls/issues"
+    "url": "https://github.com/vidurajith-darshana/react-native-app-integrity-checksum/issues"
   },
-  "homepage": "https://gis.com/sls#readme",
+  "homepage": "https://github.com/vidurajith-darshana/react-native-app-integrity-checksum#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
