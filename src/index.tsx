@@ -17,6 +17,7 @@ const AppIntegrityChecksum = NativeModules.AppIntegrityChecksum
       }
     );
 
+// get checksum native method calling from here
 export function getChecksum(): Promise<string> {
   return new Promise((resolve) => {
     AppIntegrityChecksum.getChecksum((checksum: string) => {

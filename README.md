@@ -75,6 +75,8 @@ const result = await getChecksum();
 
 * If the library does not return anything, you need to follow the steps previously defined. This happenes when missing the JS bundle file.
 
+* Try with the given example application. If not it works, Please open an Issue.
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.

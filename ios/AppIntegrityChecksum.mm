@@ -9,6 +9,8 @@ RCT_EXPORT_MODULE()
 
 // Example method
 // See // https://reactnative.dev/docs/native-modules-ios
+// IOS native method to get checksum. Current implementation to detect the main.jsbundle.
+// To work this, main.jsbundle should be copied to copy bundle resources under the build phases
 RCT_REMAP_METHOD(getChecksum,
                  getChecksumWithCallback:(RCTResponseSenderBlock)callback)
 {

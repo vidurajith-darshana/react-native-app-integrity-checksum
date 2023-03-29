@@ -49,6 +49,8 @@ public class AppIntegrityChecksumModule extends ReactContextBaseJavaModule {
   }
 
 
+  // this method currently working for detect the manifest file, classes changes and jsbundle changes.
+  // to work this in dev mode should be generate the jsbundle file.
   @ReactMethod
   public void getChecksum(Callback cb) throws Exception {
 
